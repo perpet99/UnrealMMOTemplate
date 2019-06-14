@@ -14,4 +14,5 @@ mmo system template
 
 4. 매니저 서버 구성
 
-5. 
+5. 길찾기
+
