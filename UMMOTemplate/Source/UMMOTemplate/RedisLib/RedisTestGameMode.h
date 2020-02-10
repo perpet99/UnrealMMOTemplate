@@ -9,7 +9,7 @@
 #include "ue_tcp_client.hpp"
 #include "RedisTestGameMode.generated.h"
 
-#define __CPP_REDIS_USE_CUSTOM_TCP_CLIENT
+//#define __CPP_REDIS_USE_CUSTOM_TCP_CLIENT
 
 /**
  * 

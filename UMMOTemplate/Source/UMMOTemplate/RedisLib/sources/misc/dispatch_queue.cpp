@@ -20,6 +20,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+#include <iostream>
 
 #include <cpp_redis/misc/dispatch_queue.hpp>
 
@@ -95,7 +96,7 @@ namespace cpp_redis {
 				auto vals = op.message.get_values();
 
 				for (auto v : vals) {
-					std::cout << v.second << std::endl;
+//					std::cout << v.second << std::endl;
 				}
 
 				auto res = op.callback(op.message);

@@ -9,9 +9,12 @@ public class UMMOTemplate : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] {
-            "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay","Sockets"
+            "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay","Sockets","PhysXVehicles"
             //"OnlineSubsystem"
             //"Networking", "Sockets"
         });
-	}
+
+        //PrivateDefinitions.Add("__CPP_REDIS_USE_CUSTOM_TCP_CLIENT");
+
+    }
 }
