@@ -103,7 +103,7 @@ void AChatOnlineBeaconClient::Chat_SM_Implementation(const FString & chat)
 
 		UE_LOG(LogTemp, Log, TEXT("S=>M : %s"), *chat);
 
-		gameserver->Chat_SM(chat + "=>ManagerServer");
+		gameserver->Chat_MS(chat + "=>ManagerServer");
 	}
 }
 

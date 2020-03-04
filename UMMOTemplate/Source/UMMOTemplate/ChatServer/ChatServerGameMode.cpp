@@ -13,7 +13,7 @@ void AChatServerGameMode::BeginPlay()
 	
 	const TCHAR* cmd = FCommandLine::Get();
 
-	bool RunManagerServer = true;
+	bool RunManagerServer = false;
 
 	if (FParse::Bool(cmd, TEXT("RunManagerServer="), RunManagerServer))
 	{
