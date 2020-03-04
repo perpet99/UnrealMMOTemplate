@@ -22,7 +22,7 @@ void AChatServerPlayerController::BeginPlay()
 void AChatServerPlayerController::Tick(float delta)
 {
 
-	// 클라만 콜
+	// only call by client
 	if (GetLocalRole() == ENetRole::ROLE_AutonomousProxy)
 	{
 		static float time = 0.0f;
@@ -44,6 +44,13 @@ void AChatServerPlayerController::Tick(float delta)
 
 void AChatServerPlayerController::SendChat_CS_Implementation(const FString & chat)
 {
+
+	if (FChatOnlineBeaconManager::BeaconClient == nullptr)
+	{
+		UE_LOG(LogTemp, Log, TEXT("FChatOnlineBeaconManager::BeaconClient == nullptr"));
+		return;
+	}
+
 	if (FChatOnlineBeaconManager::BeaconClient->GetConnectionState() == EBeaconConnectionState::Open)
 	{
 		// send to manager server

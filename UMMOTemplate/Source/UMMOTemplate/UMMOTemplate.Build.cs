@@ -15,6 +15,7 @@ public class UMMOTemplate : ModuleRules
         });
 
         //PrivateDefinitions.Add("__CPP_REDIS_USE_CUSTOM_TCP_CLIENT");
+        bEnableExceptions = true;
 
     }
 }

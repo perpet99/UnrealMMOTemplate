@@ -20,10 +20,10 @@ public:
 
 	
 		UFUNCTION(server, reliable, WithValidation)
-	virtual void SendChat_CS(const FString & chat);
+	void SendChat_CS(const FString & chat);
 
 		UFUNCTION(client, reliable)
-	virtual void SendChat_SC(const FString & chat);
+	void SendChat_SC(const FString & chat);
 
 	void Tick(float delta);
 
